@@ -1,0 +1,380 @@
+/* /* /* 
+.filter-search-section {
+  padding: 10px 0;
+  border-bottom: 1px solid powderblue;
+}
+
+.filter-search-section .trip-button {
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-search-section .trip-button:hover {
+  background-color: #0056b3;
+}
+
+.filter-search-section .trip-button .button-text {
+  margin-left: 5px;
+}
+
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+}
+
+
+.trip-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card .trip-details {
+  padding: 10px;
+} 
+.filter-search-section {
+  padding: 10px 0;
+  border-bottom: 1px solid powderblue;
+}
+
+.filter-search-section .search-box {
+  position: relative;
+}
+
+.filter-search-section .search-box input {
+  padding-right: 40px;
+}
+
+.filter-search-section .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+}
+
+.filter-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.filter-search-section .trip-button {
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.filter-search-section .trip-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.filter-search-section .trip-button .button-text {
+  margin-left: 5px;
+}
+
+
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.trip-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card .trip-details {
+  padding: 10px;
+} 
+.filter-search-section {
+  padding: 10px 0;
+  border-bottom: 1px solid powderblue;
+}
+
+.filter-search-section .search-box {
+  position: relative;
+}
+
+.filter-search-section .search-box input {
+  padding-right: 40px;
+}
+
+.filter-search-section .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+}
+
+.filter-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.filter-search-section .trip-button {
+  margin: 0 5px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.filter-search-section .trip-button:hover {
+  transform: scale(1.05);
+}
+
+.filter-search-section .trip-button .button-text {
+  margin-left: 5px;
+
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.trip-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card .trip-details {
+  padding: 10px;
+}
+
+
+.shimmer-wrapper {
+  width: 100%;
+  height: 290px;
+  border-radius: 10px;
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  position: relative;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+} */
+
+.filter-search-section {
+  /* padding: 10px 0;
+  border-bottom: 1px solid powderblue;
+  background-color: #f8f9fa; */
+  padding: 10px 0;
+  border: 1px solid powderblue;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.filter-search-section .search-box {
+  position: relative;
+  flex: 1;
+}
+
+.filter-search-section .search-box input {
+  padding-right: 40px;
+}
+
+.filter-search-section .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-search-section .trip-button {
+  /* margin: 5px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 14px; */
+
+  margin: 5px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 12px;
+}
+
+.filter-search-section .trip-button:hover {
+  transform: scale(1.05);
+}
+
+.filter-search-section .trip-button .button-text {
+  margin-left: 5px;
+}
+
+/* Show more button */
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Card styles */
+.trip-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card .trip-details {
+  padding: 10px;
+}
+
+.fa-heart.red {
+  color: red;
+}
+
+/* Shimmer effect */
+.shimmer-wrapper {
+  width: 100%;
+  height: 290px;
+  border-radius: 10px;
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  position: relative;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.carousel-indicators .indicator {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+  transform: scale(1.5);
+}

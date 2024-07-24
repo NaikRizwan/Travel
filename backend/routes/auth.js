@@ -31,6 +31,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+router.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 router.post("/bookingform1", async (req, res) => {
   const { email, id, ...bookingData } = req.body;
   console.log(req.body);

@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 //
 
-const dbURI = "mongodb://127.0.0.1:27017/kashmir";
+const dbURI =
+  "mongodb+srv://mohdrizwan:vc1U3phJpRLs640L@cluster1.qdanenn.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

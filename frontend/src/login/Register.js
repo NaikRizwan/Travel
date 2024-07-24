@@ -253,7 +253,9 @@ const Register = () => {
         return;
       }
       setOtpLoading(true);
-      await axios.post("/generate-otp", { email: formData.email });
+      await axios.post("https://travel-bice-five.vercel.app/generate-otp", {
+        email: formData.email,
+      });
       setOtpSent(true);
       setTimerActive(true);
       setOtpSent1(true);
@@ -271,7 +273,10 @@ const Register = () => {
     if (validateForm()) {
       try {
         setLoading(true);
-        const response = await axios.post("/reg", formData);
+        const response = await axios.post(
+          "https://travel-bice-five.vercel.app/reg",
+          formData
+        );
 
         if (response.status === 201) {
           setsucces(response.data.message);

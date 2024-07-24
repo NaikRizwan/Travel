@@ -476,7 +476,9 @@ const Trip = () => {
     const fetchTrips = async () => {
       setLoading(true);
       try {
-        const response = await fetch("/api/trips");
+        const response = await fetch(
+          "https://travel-bice-five.vercel.app/api/trips"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch trips");
         }

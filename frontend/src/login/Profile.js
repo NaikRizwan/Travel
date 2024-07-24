@@ -320,10 +320,13 @@ const Profile = () => {
       formData.append("image", selectedFile);
       formData.append("email", state.email);
 
-      const response = await fetch("/upload-image", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://travel-bice-five.vercel.app/upload-image",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

@@ -134,7 +134,7 @@ const Login = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch("/log", {
+      const res = await fetch("https://travel-bice-five.vercel.app/log", {
         method: "POST",
         credentials: "include",
         headers: {

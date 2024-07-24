@@ -44,7 +44,10 @@ const Change = () => {
     if (validateForm()) {
       try {
         setLoading(true);
-        const response = await axios.post("/changepassword", formData);
+        const response = await axios.post(
+          "https://travel-bice-five.vercel.app/changepassword",
+          formData
+        );
 
         if (response.status === 200) {
           setsucces(response.data.message);

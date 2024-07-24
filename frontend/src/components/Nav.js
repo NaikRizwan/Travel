@@ -239,14 +239,17 @@ const Nav = () => {
 
   const callAbout = async () => {
     try {
-      const response = await fetch("/about", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://travel-bice-five.vercel.app/about",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const data = await response.json();
       if (response.status === 400 || !data) {

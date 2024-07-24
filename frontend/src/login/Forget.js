@@ -72,7 +72,9 @@ const Forget = () => {
         return;
       }
       setOtpLoading(true);
-      await axios.post("/generate-otp", { email: formData.email });
+      await axios.post("https://travel-bice-five.vercel.app/generate-otp", {
+        email: formData.email,
+      });
       setOtpSent(true);
       setTimerActive(true);
       setOtpSent1(true);
@@ -98,7 +100,10 @@ const Forget = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("/forget", formData);
+      const response = await axios.post(
+        "https://travel-bice-five.vercel.app/forget",
+        formData
+      );
 
       if (response.status === 200) {
         setsucces(response.data.message);

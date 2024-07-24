@@ -339,7 +339,9 @@ const BookingShow = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/profile/${email}`);
+        const response = await axios.get(
+          `https://travel-bice-five.vercel.app/profile/${email}`
+        );
         setBookings(response.data.bookings);
         setLoading(false);
       } catch (error) {

@@ -1045,7 +1045,9 @@ const SingleTrip = () => {
   useEffect(() => {
     const fetchTrip = async () => {
       try {
-        const response = await axios.get(`/api/trips/${id}`);
+        const response = await axios.get(
+          `https://travel-bice-five.vercel.app/api/trips/${id}`
+        );
         setTrip(response.data);
         setSelectedImage(response.data.images[0]);
       } catch (error) {

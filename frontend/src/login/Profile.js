@@ -398,9 +398,9 @@ const Profile = () => {
         <div className="d-flex justify-content-around flex-wrap mt-4">
           <button
             className="btn btn-warning mb-2"
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/bookingstatus")}
           >
-            <RxDashboard className="mb-1" /> Dashboard
+            <RxDashboard className="mb-1" /> My Booking
           </button>
           <button
             className="btn btn-info mb-2"

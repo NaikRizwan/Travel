@@ -15,6 +15,7 @@ import {
   FaEye,
 } from "react-icons/fa";
 import { jsPDF } from "jspdf";
+import logo from "../LOGO26.png";
 
 const BookingDetails = () => {
   const location = useLocation();
@@ -49,9 +50,14 @@ const BookingDetails = () => {
     <div className="booking-details-container">
       <div className="booking-details-content">
         <h2 className="text-center">Booking Information</h2>
-        <h3 className="text-center">JK RR TOUR & TRAVELS</h3>
-        <p className="text-center confirmation-message">
+        <div className="d-flex justify-content-center align-items-center">
+          <img className="image_logo" src={logo} alt="logo" />
+          <h1 className="logo-text">XPLORE J&K</h1>
+        </div>
+        <p className="text-center confirmation-message font-weight-bold">
           Your booking is confirmed!
+          <br className="mt-2" />
+          Booking Details has been sent to this {formData.email}.
         </p>
 
         <div className="row mt-4">

@@ -542,7 +542,7 @@
 //   );
 // }
 import React, { useState } from "react";
-
+import pro from "../assets/rizwan.jpg";
 const testimonials = [
   {
     id: 1,
@@ -644,14 +644,15 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div className="container py-5">
+      {/* <div className="container py-5">
         <h2 className="text-center mb-4">INSTRUCTOR</h2>
         <div className="row">
           <div className="col-lg-6 mb-4">
             <img
-              src="https://d3nn873nee648n.cloudfront.net/1200x1800-new/19096/SM906443.jpg"
+              src={pro}
               className="img-fluid rounded"
               alt="Instructor"
+              style={{ height: "50vh", width: "auto", objectFit: "cover" }}
             />
           </div>
           <div className="col-lg-6 mb-4">
@@ -661,7 +662,7 @@ const Testimonial = () => {
                 <div className="instructor-info">
                   <div className="info-item">
                     <img
-                      src="https://d3nn873nee648n.cloudfront.net/1200x1800-new/19096/SM906443.jpg"
+                      src={pro}
                       className="rounded-circle mx-auto mb-3"
                       alt="Avatar"
                       style={{ width: "50px", height: "50px" }}
@@ -693,7 +694,7 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

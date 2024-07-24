@@ -242,3 +242,11 @@ a {
   background-position: center;
   background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/20476/300-PK1048596.jpg);
 }
+
+.svg1 {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  bottom: 5px;
+}

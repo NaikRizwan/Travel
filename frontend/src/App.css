@@ -399,3 +399,26 @@ a {
 .secondary-btn:hover {
   background-color: #5a6268;
 }
+
+.image_logo {
+  width: 50px;
+  border-color: chocolate;
+  border-radius: 50%;
+  border: 2px solid green;
+
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 27px; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  font-family: "Arial", sans-serif; /* Choose a font family */
+  background: linear-gradient(45deg, #ff6b6b, #f8e81c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 6px;
+  display: inline-block;
+  padding: 5px 10px;
+}

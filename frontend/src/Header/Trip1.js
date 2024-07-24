@@ -1,3 +1,4 @@
+// ;
 // import React, { useState, useEffect } from "react";
 // import { NavLink } from "react-router-dom";
 // import {
@@ -6,15 +7,15 @@
 //   FaStar,
 //   FaSyncAlt,
 //   FaRegGrinStars,
-// } from "react-icons/fa";
-// import { GrPrevious, GrNext } from "react-icons/gr";
-// import {
+//   FaCircle,
 //   FaSearch,
 //   FaFilter,
 //   FaPlus,
 //   FaStar as FaStarFilled,
+//   FaEye,
 //   FaMountain,
 // } from "react-icons/fa";
+// import { GrPrevious, GrNext } from "react-icons/gr";
 // import "./Trip.css";
 
 // const ImageCarousel = ({ images }) => {
@@ -93,6 +94,20 @@
 //           padding: "10px",
 //         }}
 //       />
+//       <div className="carousel-indicators">
+//         {images.map((_, index) => (
+//           <FaCircle
+//             key={index}
+//             className={`indicator ${
+//               index === currentImageIndex ? "active" : ""
+//             }`}
+//             onClick={() => setCurrentImageIndex(index)}
+//             style={{
+//               color: index === currentImageIndex ? "#007bff" : "#ffffff",
+//             }}
+//           />
+//         ))}
+//       </div>
 //     </div>
 //   );
 // };
@@ -119,7 +134,12 @@
 //           throw new Error("Failed to fetch trips");
 //         }
 //         const data = await response.json();
-//         setTrips(data.trips);
+//         const likedTrips = JSON.parse(localStorage.getItem("likedTrips")) || [];
+//         const updatedTrips = data.trips.map((trip) => {
+//           const likedTrip = likedTrips.find((t) => t.id === trip.id);
+//           return likedTrip ? { ...trip, isLiked: likedTrip.isLiked } : trip;
+//         });
+//         setTrips(updatedTrips);
 //       } catch (error) {
 //         console.error("Error fetching trips:", error);
 //       } finally {
@@ -164,11 +184,17 @@
 //   };
 
 //   return (
-//     <div style={{ paddingTop: "10px" }}>
+//     <div
+//       style={{
+//         backgroundColor: "whitesmoke",
+//         paddingTop: "34px",
+//         paddingBottom: "10px",
+//       }}
+//     >
 //       <div className="container">
 //         <div className="row justify-content-center mb-4 filter-search-section">
 //           <div className="col-lg-8 d-flex align-items-center">
-//             <div className="mr-2 search-box" style={{ flex: 1 }}>
+//             <div className="mr-2 search-box">
 //               <input
 //                 type="text"
 //                 className="form-control rounded-pill"
@@ -185,9 +211,8 @@
 //                   filterType === "max" ? "active" : ""
 //                 }`}
 //                 onClick={() => setFilterType("max")}
-//                 style={{ backgroundColor: "#28a745" }}
 //               >
-//                 <FaFilter size={24} />
+//                 <FaFilter size={20} />
 //                 <span className="button-text">Max Range</span>
 //               </button>
 //               <button
@@ -196,31 +221,18 @@
 //                   filterType === "min" ? "active" : ""
 //                 }`}
 //                 onClick={() => setFilterType("min")}
-//                 style={{ backgroundColor: "#17a2b8" }}
 //               >
-//                 <FaFilter size={24} />
+//                 <FaFilter size={20} />
 //                 <span className="button-text">Min Range</span>
 //               </button>
-//               {/* <button
-//                 type="button"
-//                 className={`trip-button ${
-//                   filterType === "new" ? "active" : ""
-//                 }`}
-//                 onClick={() => setFilterType("new")}
-//                 style={{ backgroundColor: "#ffc107" }}
-//               >
-//                 <FaPlus size={24} />
-//                 <span className="button-text">Add New Trip</span>
-//               </button> */}
 //               <button
 //                 type="button"
 //                 className={`trip-button ${
 //                   filterType === "famous" ? "active" : ""
 //                 }`}
 //                 onClick={() => setFilterType("famous")}
-//                 style={{ backgroundColor: "#dc3545" }}
 //               >
-//                 <FaStar size={24} />
+//                 <FaStar size={20} />
 //                 <span className="button-text">Famous Trips</span>
 //               </button>
 //               <button
@@ -229,18 +241,16 @@
 //                   filterType === "snow" ? "active" : ""
 //                 }`}
 //                 onClick={() => setFilterType("snow")}
-//                 style={{ backgroundColor: "#6c757d" }}
 //               >
-//                 <FaMountain size={24} />
+//                 <FaMountain size={20} />
 //                 <span className="button-text">Snow Places</span>
 //               </button>
 //               <button
 //                 type="button"
 //                 className="trip-button reset-button"
 //                 onClick={handleReset}
-//                 style={{ backgroundColor: "#343a40" }}
 //               >
-//                 <FaSyncAlt size={24} />
+//                 <FaSyncAlt size={20} />
 //                 <span className="button-text">Reset</span>
 //               </button>
 //             </div>
@@ -299,12 +309,6 @@
 //                             ))}
 //                           </p>
 //                         </div>
-//                         {/* <p
-//                           className="card-text trip-description"
-//                           style={{ color: "black" }}
-//                         >
-//                           <FaUser /> {trip.totalViews}
-//                         </p> */}
 //                         <div className="d-flex justify-content-between">
 //                           <p
 //                             className="card-text trip-price"
@@ -316,7 +320,8 @@
 //                             className="card-text trip-description"
 //                             style={{ color: "black" }}
 //                           >
-//                             <FaUser /> {trip.totalViews}
+//                             <FaEye style={{ marginBottom: "4px" }} />{" "}
+//                             {trip.totalViews}
 //                           </p>
 //                           <p
 //                             className="card-text trip-price"
@@ -351,11 +356,9 @@ import {
   FaUser,
   FaStar,
   FaSyncAlt,
-  FaRegGrinStars,
   FaCircle,
   FaSearch,
   FaFilter,
-  FaPlus,
   FaStar as FaStarFilled,
   FaMountain,
 } from "react-icons/fa";
@@ -504,9 +507,18 @@ const Trip = () => {
   };
 
   const filteredTrips = trips
-    .filter((trip) =>
-      trip.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    .filter((trip) => {
+      const matchesSearch = trip.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const matchesFilter =
+        filterType === "famous"
+          ? trip.famousPlace === "Yes"
+          : filterType === "snow"
+          ? trip.snowPlace === "Yes"
+          : true;
+      return matchesSearch && matchesFilter;
+    })
     .slice(0, visibleTrips);
 
   if (filterType === "max") {
@@ -608,7 +620,7 @@ const Trip = () => {
               </div>
             ))}
           </div>
-        ) : (
+        ) : filteredTrips.length > 0 ? (
           <div className="row">
             {filteredTrips.map((trip) => (
               <div className="col-lg-3 mb-4" key={trip.id}>
@@ -681,12 +693,30 @@ const Trip = () => {
               </div>
             ))}
           </div>
+        ) : (
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="no-results">
+                <h5>No results found</h5>
+                <button
+                  type="button"
+                  className="trip-button reset-button"
+                  onClick={handleReset}
+                >
+                  <FaSyncAlt size={20} />
+                  <span className="button-text">Reset</span>
+                </button>
+              </div>
+            </div>
+          </div>
         )}
-        {visibleTrips < trips.length && !loading && (
-          <button className="show-more-button" onClick={showMoreTrips}>
-            Show More
-          </button>
-        )}
+        {visibleTrips < trips.length &&
+          !loading &&
+          filteredTrips.length > 0 && (
+            <button className="show-more-button" onClick={showMoreTrips}>
+              Show More
+            </button>
+          )}
       </div>
     </div>
   );

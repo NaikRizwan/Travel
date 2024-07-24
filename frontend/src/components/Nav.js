@@ -4,7 +4,7 @@ import { useUser } from "../context/UserContext";
 import { FiLogIn } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import styled from "styled-components";
-import logo from "../Designer (2).png";
+import logo from "../LOGO26.png";
 
 const Navb = styled.nav`
   position: fixed;
@@ -289,7 +289,7 @@ const Nav = () => {
       <div className="container navbar-container">
         <div>
           <img className="image_logo" src={logo} alt="logo" />
-          <h1 className="logo-text">Explore J&K</h1>
+          <h1 className="logo-text">XPLORE J&K</h1>
         </div>
         <div className="nav-toggle" onClick={toggleNav}>
           <div className="bar"></div>
@@ -327,7 +327,7 @@ const Nav = () => {
                   <CgProfile /> My Profile
                 </NavLink>
                 <NavLink to="/bookingstatus" onClick={closeDropdown}>
-                  <CgProfile /> Dashboard
+                  <CgProfile /> My Booking
                 </NavLink>
                 <NavLink to="/logout" onClick={closeDropdown}>
                   <FiLogIn /> Logout

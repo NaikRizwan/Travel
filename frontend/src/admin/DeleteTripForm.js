@@ -47,7 +47,9 @@ function DeleteTripForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete(`/api/trips/${tripId}`);
+      await axios.delete(
+        `https://travel-bice-five.vercel.app/api/trips/${tripId}`
+      );
       setSuccessMessage("Trip deleted successfully");
       setErrorMessage(""); // Clear any previous error message
       // You can add additional logic here, such as refreshing the list of trips

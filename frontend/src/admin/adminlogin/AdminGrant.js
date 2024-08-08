@@ -8,7 +8,9 @@ const AdminGrant = () => {
     try {
       // Assuming you retrieve the userId from an input field
       // Here, 'userId' is the MongoDB ObjectId of the user you want to make an admin
-      const response = await axios.put(`/grant-admin/${userId}`);
+      const response = await axios.put(
+        `https://travel-bice-five.vercel.app/grant-admin/${userId}`
+      );
 
       console.log(response.data); // Log response if needed
 

@@ -299,11 +299,14 @@ const BookingForm = () => {
   // };
   const saveBookingDetails = async () => {
     try {
-      const response = await axios.post("/bookingform1", {
-        ...formData,
-        totalPrice,
-        id,
-      });
+      const response = await axios.post(
+        "https://travel-bice-five.vercel.app/bookingform1",
+        {
+          ...formData,
+          totalPrice,
+          id,
+        }
+      );
       setSuccessMessage("Form successfully submitted");
 
       if (response.status === 200) {

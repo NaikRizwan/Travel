@@ -9,7 +9,7 @@ const Logout = () => {
   // State for logout message
 
   useEffect(() => {
-    fetch("/logout", {
+    fetch("https://travel-bice-five.vercel.app/logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

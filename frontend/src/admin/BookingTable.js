@@ -15,7 +15,7 @@ const BookingTable = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/bookings")
+    fetch("https://travel-bice-five.vercel.app/api/bookings")
       .then((response) => response.json())
       .then((data) => {
         setBookings(data);
@@ -24,9 +24,12 @@ const BookingTable = () => {
 
   const deleteBooking = (userId, bookingId) => {
     if (window.confirm("Are you sure you want to delete this booking?")) {
-      fetch(`http://localhost:5000/api/bookings/${userId}/${bookingId}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://travel-bice-five.vercel.app/api/bookings/${userId}/${bookingId}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           alert(data.message);

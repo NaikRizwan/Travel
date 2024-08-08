@@ -221,11 +221,14 @@ const AdminDashboardProfile = () => {
       formData.append("email", state.email);
 
       // Make a POST request to your backend API endpoint to upload the image
-      const response = await fetch("/upload-image", {
-        method: "POST",
-        body: formData,
-        // Add any necessary headers, like authorization token if required
-      });
+      const response = await fetch(
+        "https://travel-bice-five.vercel.app/upload-image",
+        {
+          method: "POST",
+          body: formData,
+          // Add any necessary headers, like authorization token if required
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -254,7 +257,9 @@ const AdminDashboardProfile = () => {
   useEffect(() => {
     const fetchAdminUsers = async () => {
       try {
-        const response = await axios.get("/adminUsers"); // Replace with your backend route
+        const response = await axios.get(
+          "https://travel-bice-five.vercel.app/adminUsers"
+        ); // Replace with your backend route
         setAdminUsers(response.data);
       } catch (error) {
         console.error("Error fetching admin users:", error);

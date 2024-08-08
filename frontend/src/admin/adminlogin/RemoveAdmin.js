@@ -13,17 +13,20 @@ const RemoveAdmin = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("/remove-admin", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userEmail,
-          userPassword,
-          targetUserEmail,
-        }),
-      });
+      const response = await fetch(
+        "https://travel-bice-five.vercel.app/remove-admin",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userEmail,
+            userPassword,
+            targetUserEmail,
+          }),
+        }
+      );
 
       const data = await response.json();
 

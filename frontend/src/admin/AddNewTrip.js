@@ -140,7 +140,7 @@ const AddTripForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/trips", {
+      await axios.post("https://travel-bice-five.vercel.app/api/trips", {
         id,
         name,
         images,

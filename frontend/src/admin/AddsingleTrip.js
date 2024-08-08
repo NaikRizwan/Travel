@@ -1039,7 +1039,10 @@ const AddSingleTrip = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/singletrips", formData);
+      const res = await axios.post(
+        "https://travel-bice-five.vercel.app/api/singletrips",
+        formData
+      );
       console.log(res.data); // Response from backend
     } catch (err) {
       console.error(err.response.data);

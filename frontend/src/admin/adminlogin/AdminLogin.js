@@ -82,17 +82,20 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("/grant-admin", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userEmail,
-          userPassword,
-          targetUserEmail,
-        }),
-      });
+      const response = await fetch(
+        "https://travel-bice-five.vercel.app/grant-admin",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userEmail,
+            userPassword,
+            targetUserEmail,
+          }),
+        }
+      );
 
       const data = await response.json();
 

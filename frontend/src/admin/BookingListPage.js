@@ -125,7 +125,9 @@ const BookingListPage = () => {
 
   const fetchBookingDetails = async () => {
     try {
-      const response = await axios.get("/api/bookings");
+      const response = await axios.get(
+        "https://travel-bice-five.vercel.app/api/bookings"
+      );
       setBookings(response.data);
     } catch (error) {
       console.error("Error fetching booking details:", error);

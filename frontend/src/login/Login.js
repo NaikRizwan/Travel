@@ -162,6 +162,9 @@ const Login = () => {
           payload: {
             name: data.userlogin.full_name,
             email: data.userlogin.email,
+            role: data.userlogin.role,
+
+            img: data.userlogin.profileImage,
           },
         });
         setsucces("succesfully Login");
